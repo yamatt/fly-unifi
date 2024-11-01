@@ -19,11 +19,16 @@ primary_region = 'lhr'
   initial_size = '1gb'
 
 [http_service]
-  internal_port = 8880
+  internal_port = 8443
   force_https = true
   auto_stop_machines = "stop"
   auto_start_machines = true
   min_machines_running = 0
+
+[http_service.tls_options]
+  default_self_signed = true
+
+
 
 [[vm]]
   memory = '1gb'
