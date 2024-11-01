@@ -4,6 +4,7 @@ command = """java \
     -Dfile.encoding=UTF-8 \
     -Djava.awt.headless=true \
     -Dapple.awt.UIElement=true \
+    -Dcom.sun.net.ssl.checkRevocation=false \
     -XX:+UseParallelGC \
     -XX:+ExitOnOutOfMemoryError \
     -XX:+CrashOnOutOfMemoryError \
