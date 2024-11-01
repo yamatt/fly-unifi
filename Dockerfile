@@ -14,6 +14,7 @@ COPY unifi.system.properties /usr/lib/unifi/data/system.properties
 
 COPY pkglist /root/pkglist
 
+# hadolint ignore=DL3008
 RUN apt-get update --yes && \
     apt-get install --no-install-recommends --no-install-suggests --yes "$(cat /root/pkglist)" && \
     apt-get clean autoclean --yes && \
