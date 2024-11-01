@@ -14,7 +14,7 @@ COPY unifi.system.properties /usr/lib/unifi/data/system.properties
 
 COPY pkglist /root/pkglist
 
-# hadolint ignore=DL3008,SC2086
+# hadolint ignore=DL3008,SC2046
 RUN apt-get update --yes && \
     apt-get install --no-install-recommends --no-install-suggests --yes $(cat /root/pkglist) && \
     apt-get clean autoclean --yes && \
