@@ -22,11 +22,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check Docker files with Hadolint
-        uses: essentialkaos/hadolint-action@v1
+        uses: hadolint/hadolint-action@v3.1.0
         with:
-          files: Dockerfile
+          dockerfile: Dockerfile
           format: tty
-          strict-labels: true
           failure-threshold: warning
   deploy:
     name: Deploy app on Fly.io
