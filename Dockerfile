@@ -10,9 +10,9 @@ COPY ./services /services
 COPY --from=mongodb /usr/bin/mongo* /usr/bin/
 
 COPY --from=unifi /usr/lib/unifi /usr/lib/unifi
-COPY unifi.system.properties /usr/lib/unifi/data/system.properties
+COPY configs/unifi.system.properties /usr/lib/unifi/data/system.properties
 
-COPY pkglist /root/pkglist
+COPY configs/pkglist /root/pkglist
 
 # hadolint ignore=DL3008,SC2046
 RUN apt-get update --yes && \
