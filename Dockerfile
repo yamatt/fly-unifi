@@ -21,5 +21,7 @@ RUN apt-get update --yes && \
     apt-get autoremove --yes && \
     rm -rf /var/cache/apt/archives* /var/lib/apt/lists/*
 
+COPY configs/haproxy.cfg /etc/haproxy/haproxy.cfg
+
 
 ENTRYPOINT ["/horust", "--services-path", "/services"]
