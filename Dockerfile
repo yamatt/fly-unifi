@@ -1,6 +1,6 @@
 FROM federicoponzi/horust:v0.1.7 as horust
 FROM mongo:8.0.3-noble as mongodb
-FROM lscr.io/linuxserver/unifi-network-application:8.5.6-ls68 as unifi
+FROM lscr.io/linuxserver/unifi-network-application:8.6.9-ls68 as unifi
 
 FROM ubuntu:noble
 
