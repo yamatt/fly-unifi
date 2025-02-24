@@ -1,4 +1,4 @@
-FROM federicoponzi/horust:v0.1.7 as horust
+FROM federicoponzi/horust:v0.1.9 as horust
 FROM mongo:8.0.4-noble as mongodb
 FROM lscr.io/linuxserver/unifi-network-application:8.6.9-ls68 as unifi
 
